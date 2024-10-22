@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <title>@yield("title") | MyBlog</title>
+    <title>@yield('title', 'My Blog')</title> <!-- Default title -->
 </head>
 <body>
-        <header>
-            @include('layout.header') 
-        </header>
-       
-        <main>
-            @yield('content')
-        </main>
-        
-        <footer>
-            @include('layout.footer')
-        </footer>
+    <header>
+        @include('layout.header') 
+    </header>
+   
+    <main class="container my-4">
+        @yield('content')
+    </main>
+    
+    <footer>
+        @include('layout.footer')
+    </footer>
 
-        @yield('scripts')
+    @yield('scripts')
 
-
-    </body>
+</body>
 </html>
