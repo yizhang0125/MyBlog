@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        // Allow index and show for all users
+        $this->middleware('auth')->except(['index', 'show']);
+    }
 
   public function index(){
 
